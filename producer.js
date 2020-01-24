@@ -1,17 +1,15 @@
 
 const kafka = require('kafka-node');
-const bp = require('body-parser');
 const config = require('./config');
 
 try {
-  const Producer = kafka.Producer;
+
   const client = new kafka.KafkaClient(config.kafka_server);
-  const producer = new Producer(client);
-  const kafka_topic = 'example';
-  console.log(kafka_topic);
+  const producer = new kafka.Producer(client);
+
   let payloads = [
     {
-      topic: kafka_topic,
+      topic: 'sample message topic',
       messages: config.kafka_topic
     }
   ];
@@ -31,6 +29,7 @@ try {
     console.log('[kafka-producer -> '+kafka_topic+']: connection errored');
     throw err;
   });
+  
 }
 catch(e) {
   console.log(e);

@@ -1,16 +1,17 @@
 {
   "name": "apache-kafka",
   "version": "1.0.0",
-  "description": "",
+  "description": "Let's build a pub/sub program using Kafka and Node.js, Kafka is a enterprise level tool for sending messages across the Microservices.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "producer" : "node producer.js",
+    "consumer" : "node consumer.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "sivabharathy",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "kafka-node": "^5.0.0"
   }
 }

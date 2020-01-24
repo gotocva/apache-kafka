@@ -24,8 +24,7 @@ $ sudo useradd kafka -m
 ```
 $ sudo passwd kafka
 ```
-
-// It asks for new password for user kafka
+It asks for new password for user kafka
 
 ```
 $ sudo adduser kafka sudo
